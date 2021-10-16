@@ -1,5 +1,5 @@
 from flask import Flask, redirect, url_for, render_template
-
+from tickerInfo import Trade, allDeals
 app = Flask(__name__)
 
 
@@ -16,6 +16,10 @@ def classes():
     paraList = [instance, method, atributes]
     return render_template("classes.html", paraList=paraList)
 
+
+@app.route("/reits")
+def REITs():
+    return render_template("reits.html", allDeals=allDeals)
 
 
 if __name__ == "__main__":

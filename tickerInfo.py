@@ -1,6 +1,7 @@
 from datetime import date
 
 class Trade():
+    instances = []
     def __init__(self, name, buyDate, amount, price, total, fee):
         self.name = name
         self.buyDate = buyDate
@@ -8,6 +9,7 @@ class Trade():
         self.price = price
         self.total = total
         self.fee = fee
+        self.__class__.instances.append(self)
 
     def total_paid(self):
         total_paid = self.total + self.fee
@@ -29,13 +31,8 @@ class Trade():
         d1 = self.stonksDate()
         dayCount = d1 - d0
         return dayCount
-
-6,42
-31,69
-17,50
-7,85
-10,86
-
+    def returnValuesInList(self):
+        return ([self.name, self.buyDate, self.amount, self.price, self.total, self.fee])
 
 
 nakup0 = Trade("MMT", date(2021, 10, 5), 93, 6.42, 605.01, 7.95)
@@ -50,7 +47,7 @@ nakup5 = Trade("O", date(2021, 9, 24), 11, 66.58, 740.33, 7.95)
 nakup6 = Trade("ORC", date(2021, 8, 20), 100, 4.9, 497.95, 7.95)
 
 
-
+allDeals = [nakup0, nakup1, nakup2, nakup3, nakup4, nakup5, nakup6]
 
 nakup0.print_values()
 nakup1.print_values()
@@ -60,8 +57,10 @@ nakup4.print_values()
 nakup5.print_values()
 nakup6.print_values()
 
-
-
+x=0
+for _ in Trade.instances:
+    print(Trade.instances[x].returnValuesInList())
+    x=x+1
 
 
 #print(nakup0.fee)
