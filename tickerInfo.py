@@ -58,7 +58,8 @@ nakup5.print_values()
 nakup6.print_values()
 
 x=0
-for _ in Trade.instances:
+TradeInst = Trade.instances
+for _ in TradeInst:
     print(Trade.instances[x].returnValuesInList())
     x=x+1
 
