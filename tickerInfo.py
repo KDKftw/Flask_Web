@@ -32,6 +32,7 @@ class Trade():
         dayCount = d1 - d0
         return dayCount
     def returnValuesInList(self):
+
         return ([self.name, self.buyDate, self.amount, self.price, self.total, self.fee])
 
 
@@ -57,14 +58,21 @@ nakup4.print_values()
 nakup5.print_values()
 nakup6.print_values()
 
-x=0
-TradeInst = Trade.instances
-for _ in TradeInst:
-    print(Trade.instances[x].returnValuesInList())
-    x=x+1
-
+#print(Trade.instances[x].returnValuesInList())
 
 #print(nakup0.fee)
 #print(nakup0.buyDate)
 #print(nakup0.stonksDate())
 #print(nakup0.stonksDateDayCount())
+
+
+def returnActualValues(x):
+    TradeInst = Trade.instances
+
+    for _ in TradeInst:
+        return(Trade.instances[x].returnValuesInList())
+        print(Trade.instances[x].returnValuesInList())
+        x = x + 1
+
+print(Trade.instances[0].returnValuesInList())
+returnActualValues(0)
