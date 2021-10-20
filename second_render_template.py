@@ -1,5 +1,5 @@
 from flask import Flask, redirect, url_for, render_template
-from tickerInfo import Trade, allDeals, TradeInst, returnActualValues
+from tickerInfo import Trade, allDeals, returnActualValues, TradeInst
 app = Flask(__name__)
 
 

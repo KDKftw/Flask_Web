@@ -46,9 +46,9 @@ bigDeal = [nakup0, nakup1, nakup2, nakup3, nakup4]
 
 nakup5 = Trade("O", date(2021, 9, 24), 11, 66.58, 740.33, 7.95)
 nakup6 = Trade("ORC", date(2021, 8, 20), 100, 4.9, 497.95, 7.95)
+nakup7 = Trade("HRZN", date(2021, 10, 20), 73, 17.10, 1256.25, 7.95)
 
-
-allDeals = [nakup0, nakup1, nakup2, nakup3, nakup4, nakup5, nakup6]
+allDeals = [nakup0, nakup1, nakup2, nakup3, nakup4, nakup5, nakup6, nakup7]
 
 nakup0.print_values()
 nakup1.print_values()
@@ -57,6 +57,7 @@ nakup3.print_values()
 nakup4.print_values()
 nakup5.print_values()
 nakup6.print_values()
+nakup7.print_values()
 
 #print(Trade.instances[x].returnValuesInList())
 
@@ -65,9 +66,9 @@ nakup6.print_values()
 #print(nakup0.stonksDate())
 #print(nakup0.stonksDateDayCount())
 
-
+TradeInst = Trade.instances
 def returnActualValues(x):
-    TradeInst = Trade.instances
+    x = 0
 
     for _ in TradeInst:
         return(Trade.instances[x].returnValuesInList())
