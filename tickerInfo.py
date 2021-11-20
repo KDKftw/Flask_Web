@@ -35,6 +35,14 @@ class Trade():
 
         return ([self.name, self.buyDate, self.amount, self.price, self.total, self.fee])
 
+    #diviList = []
+    def dividends(self, cleanDivi):
+        self.diviList = [cleanDivi]
+        self.diviList.append(cleanDivi)
+        return(self.diviList)
+
+    def dividendsList(self):
+        self.diviList
 
 nakup0 = Trade("MMT", date(2021, 10, 5), 93, 6.42, 605.01, 7.95)
 nakup1 = Trade("LTC", date(2021, 9, 30), 34, 31.69, 1085.41, 7.95)
@@ -77,3 +85,10 @@ def returnActualValues(x):
 
 print(Trade.instances[0].returnValuesInList())
 returnActualValues(0)
+
+
+nakup0.dividends(40)
+nakup0.dividends(13)
+nakup1.dividends(2)
+print(nakup1.diviList)
+print(nakup0.diviList)
