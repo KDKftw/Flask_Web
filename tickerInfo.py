@@ -44,16 +44,16 @@ class Trade():
     def dividendsList(self):
         self.diviList
 
-nakup0 = Trade("MMT", date(2021, 10, 5), 93, 6.42, 605.01, 7.95)
-nakup1 = Trade("LTC", date(2021, 9, 30), 34, 31.69, 1085.41, 7.95)
-nakup2 = Trade("DX", date(2021, 9, 28), 40, 17.50, 707.95, 7.95)
-nakup3 = Trade("PSEC", date(2021, 9, 28), 70, 7.85, 557.45, 7.95)
-nakup4 = Trade("ARR", date(2021, 9, 28), 90, 10.86, 985.35, 7.95)
+nakup0 = Trade("MMT", date(2021, 10, 5), 93, 6.42, 605.01, 7.95)    ##
+nakup1 = Trade("LTC", date(2021, 9, 30), 34, 31.69, 1085.41, 7.95)  ##
+nakup2 = Trade("DX", date(2021, 9, 28), 40, 17.50, 707.95, 7.95)    ##
+nakup3 = Trade("PSEC", date(2021, 9, 28), 70, 7.85, 557.45, 7.95)   ##
+nakup4 = Trade("ARR", date(2021, 9, 28), 90, 10.86, 985.35, 7.95)   ##
 
 bigDeal = [nakup0, nakup1, nakup2, nakup3, nakup4]
 
-nakup5 = Trade("O", date(2021, 9, 24), 11, 66.58, 740.33, 7.95)
-nakup6 = Trade("ORC", date(2021, 8, 20), 100, 4.9, 497.95, 7.95)
+nakup5 = Trade("O", date(2021, 9, 24), 11, 66.58, 740.33, 7.95)         ##
+nakup6 = Trade("ORC", date(2021, 8, 20), 100, 4.9, 497.95, 7.95)        ##
 nakup7 = Trade("HRZN", date(2021, 10, 20), 73, 17.10, 1256.25, 7.95)
 
 allDeals = [nakup0, nakup1, nakup2, nakup3, nakup4, nakup5, nakup6, nakup7]
